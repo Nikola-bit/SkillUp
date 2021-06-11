@@ -1,0 +1,565 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SkillUpApi</name>
+    </assembly>
+    <members>
+        <member name="M:SkillUpApi.Controllers.CoursesController.GetAllCourses(SkillUpDTO.Filters.PaginationFilter)">
+            <summary>
+            Get all Courses
+            </summary>
+            <returns>All Courses</returns>
+            <response code = "200">Return all Courses</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.CoursesController.GetAllSessionByCourseId(System.String)">
+            <summary>
+            Get Session by CourseId
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /single/session
+                {
+                    "CourseId" : 1
+                }
+                
+            mandatory Field* : CourseId
+            </remarks>
+            <param name="id"></param>
+            <returns></returns>
+            <response code = "200">Return Session by CourseId</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.CoursesController.GetCursById(System.String)">
+            <summary>
+            Get Course by Id
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /single/Course
+                {
+                    "CourseId" : 1
+                }
+                
+            mandatory Field* : CourseId
+            </remarks>
+            <param name="id"></param>
+            <returns></returns>
+            <response code = "200">Return Course by Id</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.CoursesController.AddCurs(SkillUpDTO.DTO.CoursesCreateDTO)">
+            <summary>
+            Create a new Course
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /course/Create
+                {
+                    "Price" : 200,
+                    "IsActive": true,
+                    "CoursetypeId" : 1
+                 }
+                 
+            Mandatory Fields* : Price, IsActive, CourseType
+            </remarks>
+            <param name="courseCreate"></param>
+            <returns>Updated list of Courses</returns>
+            <response code = "200">Return updated list of Courses</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.CoursesController.DeleteCourse(System.String)">
+            <summary>
+            Delete Course by Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                Delete /single/Course
+                {
+                    "CourseId" : 1
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single Course</returns>
+            <response code = "200">Return single Course</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.CoursesController.UpdateCourse(SkillUpDTO.DTO.CoursesDTO)">
+            <summary>
+            Update Course
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /update/Course
+                    {
+                        "CourseID": 1,
+                        "Price" : 200,
+                        "isActive" : true,
+                        "CourseTypeId" : 1
+                        
+                    }
+                    
+            </remarks>
+            <param name="updateCourse"></param>
+            <returns>Updated list of courses</returns>
+            <response code = "200">Return updated list of courses</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.CoursesController.AddLead(SkillUpDTO.DTO.CourseLeadsCreateDTO)">
+            <summary>
+            Create a new Lead
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /course/CourseLead/create
+                {
+                    "FirstName" : "Example',
+                    "LastName": "num1",
+                    "EMail" : "some@enail",
+                    "Phone" : "12354",
+                    "Note" : "some note",
+                    "IsActive" : 1,
+                    "CourseId" : 1
+                 }
+                 
+            </remarks>
+            <param name="leadsCreate"></param>
+            <returns>Updated list of Leads</returns>
+            <response code = "200">Return updated list of Leads</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.CoursesController.GetAllLeads">
+            <summary>
+            Get all Leads
+            </summary>
+            <returns>All Leads</returns>
+            <response code = "200">Return all Leads</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.CoursesController.DeleteLead(System.String)">
+            <summary>
+            Delete Lead by Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                Delete /single/Lead
+                {
+                    "LeadId" : 1
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single Lead</returns>
+            <response code = "200">Return single lead</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.CoursesController.UpdateLead(SkillUpDTO.DTO.CourseLeadsDTO)">
+            <summary>
+            Update Lead
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /update/Lead
+                    {
+                       "LeadId": 1,
+                       "FirstName" : "name",
+                       "LastName" : "last",
+                       "email" : "somemail",
+                       "phone" : "234673",
+                       "note" : "some note",
+                       "isActive" : true,
+                       "CourseId": 1
+                        
+                    }
+                    
+            </remarks>
+            <param name="updateLead"></param>
+            <returns>Updated list of leads</returns>
+            <response code = "200">Return updated list of leads</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.SessionController.GetAllSessions(SkillUpDTO.Filters.PaginationFilter)">
+            <summary>
+            Get All Sessions
+            </summary>
+            <returns>All Sessions</returns>
+            <response code = "200">Return all session</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.SessionController.GetAllStudentBySessionId(System.String)">
+            <summary>
+            Get AllS tudent By SessionId
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                GET /students/BySession
+                {
+                    "SessonId" : 1
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Students</returns>
+            <response code = "200">Return students</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.SessionController.GetSessionById(System.String)">
+            <summary>
+            Get Session by Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                GET /single/Session
+                {
+                    "SessonId" : 1
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single session</returns>
+            <response code = "200">Return single session</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.SessionController.AddSession(SkillUpDTO.DTO.SessionCreateDTO)">
+            <summary>
+            Create a new Session
+            </summary>
+            <remarks >
+            
+            Sample request:
+            
+                POST /session/Create
+                {
+                    "DateFrom": 2020-07-23,
+                    "DateTo": 2020-08-12,
+                    "RoomId": 1,
+                    "SessionTeacherId": 1,
+                    "SessionStudentId": 1,
+                    "CourseId":1
+                }
+            </remarks>
+            <param name="sessionCreate"></param>
+            <returns>Updated list of session</returns>
+            <response code = "200">Return updated list of session</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.SessionController.DeleteSession(System.String)">
+            <summary>
+            Delete Session by Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                Delete /single/Session
+                {
+                    "SessionId" : 1
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single Session</returns>
+            <response code = "200">Return single Session</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.SessionController.UpdateSession(SkillUpDTO.DTO.SessionDTO)">
+            <summary>
+            Update Session
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /update/Session
+                    {
+                        "Sessionid": 1,
+                        "RoomId" : 1,
+                        "SessionTeacherId" : 1,
+                        "SessionStudentId" : 1,
+                        "CourseId": 1,
+                        "DateFrom": 2020-07-08,
+                        "Date to" 2020-10-10
+                        
+                    }
+                    
+            </remarks>
+            <param name="updateSession"></param>
+            <returns>Updated list of sessions</returns>
+            <response code = "200">Return updated list of sessions</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.SessionController.GetAllFreeRooms">
+            <summary>
+            Get All Free Rooms
+            </summary>
+            <returns>All free rooms</returns>
+            <response code = "200">Return all free rooms</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.SessionController.GetRoomByLocation(System.String)">
+            <summary>
+            Get Room by LocationId
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                GET /single/Room
+                {
+                    "LocationId" : 1
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single room</returns>
+            <response code = "200">Return single room</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.SessionController.AddNote(SkillUpDTO.DTO.SesssionStudentNoteCreateDTO)">
+            <summary>
+            Create a new Note
+            </summary>
+            <remarks >
+            
+            Sample request:
+            
+                POST /Session/Student/Note/Create
+                {
+                    "Note" : "Sample note",
+                    "SessionStudentid" : 1
+                }
+            </remarks>
+            <returns>Updated list of notes</returns>
+            <response code = "200">Return updated list of notes</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.SessionController.GetAllNotes">
+            <summary>
+            Get All notes
+            </summary>
+            <returns>All notes</returns>
+            <response code = "200">Return all notes</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.SessionController.DeleteNote(System.String)">
+            <summary>
+            Delete Note by Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                Delete /single/Note
+                {
+                    "NoteId" : 1
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single note</returns>
+            <response code = "200">Return single note</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.SessionController.UpdateNote(SkillUpDTO.DTO.SessionStudentNoteDTO)">
+            <summary>
+            Update Note
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /update/Note
+                    {
+                        "NoteId": 1,
+                        "Note": "some note",
+                        "SessionStudentid" : 1      
+                    }
+                    
+            </remarks>
+            <param name="updateNote"></param>
+            <returns>Updated list of notes</returns>
+            <response code = "200">Return updated list of notes</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.StudentController.GetAllStudents(SkillUpDTO.Filters.PaginationFilter)">
+            <summary>
+            Get All Students
+            </summary>
+            <returns>All Students</returns>
+            <response code = "200">Return all Students</response>
+            <response code = "400">Some error occured</response>
+            
+        </member>
+        <member name="M:SkillUpApi.Controllers.StudentController.GetStudentById(System.String)">
+            <summary>
+            Get Student By Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                GET /single/Student
+                {
+                    "StudentId" : 1
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single Student</returns>
+            <response code = "200">Return Student by Id</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.StudentController.AddStudent(SkillUpDTO.DTO.StudentCreateDTO)">
+            <summary>
+            Create a new Student
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /create/Student
+                    {
+                        "FirstName": "Tom",
+                        "LastName" : "Cruze",
+                        "email" : "somemail@.com",
+                        "phone" : "23411"
+                    }
+            </remarks>
+            <param name="studentCreate"></param>
+            <returns>Updated list of students</returns>
+            <response code = "200">Return updated list of students</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.StudentController.UpdateStudent(SkillUpDTO.DTO.StudentDTO)">
+            <summary>
+            Update Student
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /update/Student
+                    {
+                        "FirstName": "Tom",
+                        "LastName" : "Cruze",
+                        "email" : "somemail@.com",
+                        "phone" : "6512"
+                        
+                    }
+                    
+            </remarks>
+            <param name="studentUpdate"></param>
+            <returns>Updated list of students</returns>
+            <response code = "200">Return updated list of students</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.StudentController.DeleteStudent(System.String)">
+            <summary>
+            Delete Student by Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                Delete /single/Lead
+                {
+                    "StudentId" : 1
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single Student</returns>
+            <response code = "200">Return single Student</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.TeacherController.GetAllTeachers(SkillUpDTO.Filters.PaginationFilter)">
+            <summary>
+            Get All Teachers
+            </summary>
+            <returns>All Teachers</returns>
+            <response code = "200">Return all Teachers</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.TeacherController.GetTeacherById(System.String)">
+            <summary>
+            Get Teacher By Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                GET /single/Teacher
+                {
+                    "TeacherId" : 1
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single Teacher</returns>
+            <response code = "200">Return Teacher by Id</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.TeacherController.AddTeacher(SkillUpDTO.DTO.TeacherCreateDTO)">
+            <summary>
+            Create a new Teacher
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /create/Teacher
+                    {
+                        "FirstName": "Tom",
+                        "LastName" : "Cruze",
+                        "email" : "somemail@.com",
+                        
+                    }
+                    
+            Mandatory Fields* : FirstName, LastName
+            </remarks>
+            <param name="teacherCreate"></param>
+            <returns>Updated list of teachers</returns>
+            <response code = "200">Return updated list of teachers</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.TeacherController.UpdateTeacher(SkillUpDTO.DTO.TeacherDTO)">
+            <summary>
+            Update Teacher
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /update/Teacher
+                    {
+                        "FirstName": "Tom",
+                        "LastName" : "Cruze",
+                        "email" : "somemail@.com",
+                        
+                    }
+                    
+            </remarks>
+            <param name="teacherupdate"></param>
+            <returns>Updated list of teachers</returns>
+            <response code = "200">Return updated list of teachers</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:SkillUpApi.Controllers.TeacherController.DeleteTeacher(System.String)">
+            <summary>
+            Delete Teacher by Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                Delete /single/Teacher
+                {
+                    "TeacherId" : 1
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single Teacher</returns>
+            <response code = "200">Return single Teacher</response>
+            <response code = "400">Some error occured</response>
+        </member>
+    </members>
+</doc>

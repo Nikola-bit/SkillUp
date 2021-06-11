@@ -1,0 +1,154 @@
+2020-07-27T09:13:02.1850988+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-07-27T09:13:02.1998229+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-07-27T09:13:02.2062756+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi" (b5d60022)
+2020-07-27T09:30:41.0952588+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-07-27T09:30:41.1165654+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-07-27T09:30:41.1285210+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi" (b5d60022)
+2020-07-27T09:36:05.0154553+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-07-27T09:36:05.0395601+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-07-27T09:36:05.0430157+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi" (b5d60022)
+2020-07-27T09:40:10.2014850+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-07-27T09:40:10.2416009+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-07-27T09:40:10.2452510+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi" (b5d60022)
+2020-07-27T10:18:00.8458083+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-07-27T10:18:00.8617381+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-07-27T10:18:00.8649485+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi" (b5d60022)
+2020-07-27T10:20:16.5375905+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-07-27T10:20:16.5526999+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-07-27T10:20:16.5792639+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi" (b5d60022)
+2020-07-27T11:12:05.0490628+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-07-27T11:12:05.0675094+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-07-27T11:12:05.0709815+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi" (b5d60022)
+2020-07-27T11:14:19.5248460+02:00 8000004e-0000-fc00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Object -> List`1
+System.Object -> System.Collections.Generic.List`1[[SkillUpDTO.DTO.SessionDTO, SkillUpDTO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Courses -> SessionDTO
+SkillUpApi.Models.Courses -> SkillUpDTO.DTO.SessionDTO
+   at lambda_method(Closure , Courses , SessionDTO , ResolutionContext )
+   at lambda_method(Closure , Object , List`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , List`1 , ResolutionContext )
+   at SkillUpApi.Data.CoursesRepository.GetAllSessionByCourseId(String id)
+   at SkillUpApi.Controllers.CoursesController.GetAllSessionByCourseId(String id)
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-27T11:15:13.3492992+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-07-27T11:15:13.3704459+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-07-27T11:15:13.3746181+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi" (b5d60022)
+2020-07-27T11:16:06.5358661+02:00 80000028-0002-fc00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Object -> List`1
+System.Object -> System.Collections.Generic.List`1[[SkillUpDTO.DTO.SessionDTO, SkillUpDTO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Courses -> SessionDTO
+SkillUpApi.Models.Courses -> SkillUpDTO.DTO.SessionDTO
+   at lambda_method(Closure , Courses , SessionDTO , ResolutionContext )
+   at lambda_method(Closure , Object , List`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , List`1 , ResolutionContext )
+   at SkillUpApi.Data.CoursesRepository.GetAllSessionByCourseId(String id) in D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi\Data\CoursesRepository.cs:line 55
+   at SkillUpApi.Controllers.CoursesController.GetAllSessionByCourseId(String id) in D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi\Controllers\CoursesController.cs:line 40
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-27T11:18:01.0373065+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-07-27T11:18:01.0576025+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-07-27T11:18:01.0602595+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi" (b5d60022)
+2020-07-27T11:19:46.2131791+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-07-27T11:19:46.2308484+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-07-27T11:19:46.2390488+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi" (b5d60022)
+2020-07-27T11:31:38.2764910+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-07-27T11:31:38.3273355+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-07-27T11:31:38.3358075+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi" (b5d60022)
+2020-07-27T11:38:16.9253142+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-07-27T11:38:16.9475019+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-07-27T11:38:16.9502181+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi" (b5d60022)
+2020-07-27T11:44:02.5535689+02:00 8000003c-0002-fc00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+SesssionStudentNoteCreateDTO -> SessionStudentNote
+SkillUpDTO.DTO.SesssionStudentNoteCreateDTO -> SkillUpApi.Models.SessionStudentNote
+
+Type Map configuration:
+SesssionStudentNoteCreateDTO -> SessionStudentNote
+SkillUpDTO.DTO.SesssionStudentNoteCreateDTO -> SkillUpApi.Models.SessionStudentNote
+
+Destination Member:
+SessionStudentid
+
+ ---> System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Number.ParseInt32(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
+   at lambda_method(Closure , Object , SessionStudentNote , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , Object , SessionStudentNote , ResolutionContext )
+   at SkillUpApi.Data.SessionRepository.AddNote(SesssionStudentNoteCreateDTO noteCreate)
+   at SkillUpApi.Controllers.SessionController.AddNote(SesssionStudentNoteCreateDTO sessionCreateNote)
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-07-27T11:49:43.0713253+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-07-27T11:49:43.0912991+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-07-27T11:49:43.0948979+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi" (b5d60022)
+2020-07-27T12:45:01.3592262+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-07-27T12:45:01.3748620+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-07-27T12:45:01.3796875+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi" (b5d60022)
+2020-07-27T12:48:50.3116926+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-07-27T12:48:50.3291116+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-07-27T12:48:50.3314760+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi" (b5d60022)
+2020-07-27T12:52:30.5236527+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-07-27T12:52:30.5735936+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-07-27T12:52:30.5780183+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\SkillUpApi\SkillUpApi\SkillUpApi" (b5d60022)
